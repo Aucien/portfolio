@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server",
+    "dev": "concurrently \" nodemon server \" \" npm run start-client \" ",
     "build-client": "cd client && npm install",
-    "start-client": "cd client && npm start"
+    "start-client": "cd client && npm start",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
